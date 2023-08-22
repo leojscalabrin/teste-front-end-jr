@@ -5,8 +5,10 @@ export function HeaderInfo() {
         <div className="header__info">
             <div className="header__info-item">
                 <img src="../assets/ShieldCheck.png"/>
-                <div className="header__info-text">Compra</div>
-                <div className="header__info-pink-text"> 100% segura</div>
+                <div className="header__info-text">
+                    <span className="header__info-text-grey">Compra</span>
+                    <span className="header__info-text-pink">100% segura</span>
+                </div>
             </div>
         </div>
     )

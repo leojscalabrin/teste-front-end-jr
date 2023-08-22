@@ -1,8 +1,11 @@
 import React from "react"
 import { HeaderInfo } from "./HeaderInfo"
+import '../styles/Header.scss'
 
 export function Header() {
     return (
-        <HeaderInfo/>
+        <div className="header">
+            <HeaderInfo/>
+        </div>
     )
 }
