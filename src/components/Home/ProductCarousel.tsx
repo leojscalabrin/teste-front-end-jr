@@ -36,7 +36,8 @@ const ProductCarousel = () => {
             <img className="home__product-carousel--product-image" src={product.photo} alt={product.productName} />
             <h3 className="home__product-carousel--product-name">{product.productName}</h3>
             <p className="home__product-carousel--product-description">{product.descriptionShort}</p>
-            <p className="home__product-carousel-product-price">R$ {product.price.toFixed(2)}</p>
+            <p className="home__product-carousel--product-price">R$ {product.price.toFixed(2)}</p>
+            <p className="home__product-carousel--free-shipping">Frete grátis</p>
             <button className="home__product-carousel--buy-button">Comprar</button>
           </div>
         ))}

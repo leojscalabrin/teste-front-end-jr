@@ -156,7 +156,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 200px;
+            margin: 25px 200px;
         }
 
         &--category-title {
@@ -182,13 +182,79 @@
     }
 
     &__product-carousel {
-        margin: 0px 200px;
+        margin: 0px 32px 0 200px;
+
+        .slick-arrow.slick-prev,
+        .slick-arrow.slick-next{
+            &:before {
+                font-size: 34px;
+            }
+        }
+
+        .slick-prev{
+            left: -60px;
+        }
+
+        .slick-next{
+            right: 120px;
+        }
+
+        .slick-list {
+            max-width: 84vw;
+        }
 
         &--product-card {
             display: flex !important;
             flex-direction: column;
-            align-items: center;
+            align-items: start;
             justify-content: center;
+            max-width: 270px;
+            max-height: 500px;
+            box-shadow: 0px 3px 19px 0px #00000038;
+            padding: 15px;
+        }
+
+        &--product-name {
+            font-family: Poppins;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 23px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #3f3f3f;
+        }
+
+        &--product-price {
+            font-family: Poppins;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #3f3f3f;
+        }
+
+        &--free-shipping {
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #f71963;
+        }
+
+        &--buy-button {
+            width: 245px;
+            height: 44px;
+            top: 440px;
+            left: 11px;
+            border-radius: 4px;
+            border-color: transparent;
+            background-color: #f71963;
+            color: #FFF;
+            cursor: pointer;
+            text-transform: uppercase;
         }
     }
 }
