@@ -1,4 +1,5 @@
 import "../../styles/Home.scss";
+import Brands from "./Brands";
 import { CatMenu } from "./CatMenu";
 import { CategorySelection } from "./CategorySelection";
 import { MainBanner } from "./MainBanner";
@@ -21,6 +22,8 @@ export function Home() {
                 Ver todos
             </p>
             <RelatedProductsImages />
+            <h2 className="home__brand-carousel--title">Navegue por marcas</h2>
+            <Brands />
         </main>
     )
 }

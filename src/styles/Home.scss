@@ -223,6 +223,7 @@
             max-height: 500px;
             box-shadow: 0px 3px 19px 0px #00000038;
             padding: 15px;
+            cursor: pointer;
         }
 
         &--product-name {
@@ -402,17 +403,69 @@
             border-radius: 4px;
             background-color: #f71963;
             border: none;
-            color: #FFF;
+            color: #fff;
             text-transform: uppercase;
             font-weight: 500;
             cursor: pointer;
 
             &:hover {
                 color: #f71963;
-                background-color: #FFF;
+                background-color: #fff;
                 transition-duration: 350ms;
                 border: 1px solid #f71963;
             }
+        }
+    }
+
+    &__brand-carousel {
+        margin: 0px 32px 60px 200px;
+
+        img {
+            cursor: pointer;
+        }
+
+        .slick-arrow.slick-prev,
+        .slick-arrow.slick-next {
+            &:before {
+                font-size: 34px;
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+
+        .slick-list {
+            max-width: 84vw;
+        }
+
+        &--title {
+            font-family: Poppins;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: #f71963;
+        }
+
+        &--button {
+            cursor: pointer;
+            color: #0080bf;
+            width: 56px;
+            height: 56px;
+            font-size: 40px;
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 4px;
+            top: 36%;
+            right: 10%;
+            box-shadow: 0px 4px 10px 0px #0000002e;
         }
     }
 }
