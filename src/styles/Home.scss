@@ -79,7 +79,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 0 200px;
+        margin: 25px 200px;
 
         &--item {
             display: flex;
@@ -102,11 +102,8 @@
             box-shadow: 0px 2px 9px 0px #00000038;
 
             &.selected {
-                background-color: #FFFFFF;
+                background-color: #ffffff;
             }
-        }
-
-        &--item-icon {
         }
 
         &--item-text {
@@ -116,10 +113,70 @@
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
-            color: #4E4E4E;
+            color: #4e4e4e;
 
             &.selected {
                 color: #f71963;
+            }
+        }
+    }
+
+    &__related-products {
+        &--title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Poppins;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #f71963;
+            position: relative;
+
+            &:before {
+                content: "";
+                border: 1px solid #DEDEDE;
+                width: 360px;
+                position: absolute;
+                left: 20%;
+            }
+
+            &:after {
+                content: "";
+                border: 1px solid #DEDEDE;
+                width: 360px;
+                position: absolute;
+                right: 20%;
+            }
+        }
+
+        &--category-selection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 200px;
+        }
+
+        &--category-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            color: #BDBDBD;
+            text-transform: uppercase;
+            border: 1px solid #BDBDBD;
+            width: 100%;
+
+            &.selected {
+                color: #f71963;
+            }
+
+            &:hover {
+                color: #f71963;
+                transition-duration: 350ms;
+                cursor: pointer;
             }
         }
     }
