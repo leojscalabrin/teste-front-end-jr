@@ -1,17 +1,22 @@
-import { productList, Product } from "./productList";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { NextArrow, PrevArrow } from "./CarouselArrows";
+import React, { useState } from 'react';
+import { productList, Product } from './productList';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { NextArrow, PrevArrow } from './CarouselArrows';
+import ProductModal from './ProductModal';
 
 const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat("pt-BR", {
-    style: "currency",
-    currency: "BRL",
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
   }).format(price);
 };
 
 const ProductCarousel = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -35,12 +40,26 @@ const ProductCarousel = () => {
     ],
   };
 
+  const openModal = (product: Product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="home__related-products--carousel">
       <div className="home__product-carousel">
         <Slider {...settings}>
           {productList.products.map((product: Product, index: number) => (
-            <div key={index} className="home__product-carousel--product-card">
+            <div
+              key={index}
+              className="home__product-carousel--product-card"
+              onClick={() => openModal(product)}
+            >
               <img
                 className="home__product-carousel--product-image"
                 src={product.photo}
@@ -65,6 +84,9 @@ const ProductCarousel = () => {
           ))}
         </Slider>
       </div>
+      {isModalOpen && selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={closeModal} />
+      )}
     </div>
   );
 };
