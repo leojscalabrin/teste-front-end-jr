@@ -182,7 +182,7 @@
     }
 
     &__product-carousel {
-        margin: 0px 32px 0 200px;
+        margin: 0px 32px 60px 200px;
 
         .slick-arrow.slick-prev,
         .slick-arrow.slick-next{
@@ -256,5 +256,16 @@
             cursor: pointer;
             text-transform: uppercase;
         }
+    }
+
+    &__partners {
+       &--wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+       }
+       &--image {
+        cursor: pointer;
+       } 
     }
 }
